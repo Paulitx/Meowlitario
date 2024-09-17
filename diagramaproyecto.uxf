@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>462</x>
+      <y>33</y>
+      <w>308</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>Common
+--
++ load_image(filename, transparent=False)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>572</x>
+      <y>165</y>
+      <w>286</w>
+      <h>275</h>
+    </coordinates>
+    <panel_attributes>Carta
+--
++ numero: int
++ pinta: str
++ pila: None
++ clicked: bool
++ estado: bool
++ image: Image
+--
++ init (numero. pinta, posx=-1, posy=-1)
++ settopfleft(x, y)
++ arrastrar(x, y)
++ setcenter(x, y)
++ mostrar()
++ ocultar()
++ switch()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>132</x>
+      <y>209</y>
+      <w>220</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>PilaSubir
+--
++ pinta: str
++ image: Image
++ cartas: []
+--
++ init(pinta, posx=-1, posy=-1)
++ settopleft(x, y)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>374</x>
+      <y>341</y>
+      <w>143</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>Mazo
+--
++ image: Image
++ cartas: []
+--
++ init()
++ settopleft
++ crearmazo()
++ revolver()
++ debug</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>924</x>
+      <y>165</y>
+      <w>231</w>
+      <h>572</h>
+    </coordinates>
+    <panel_attributes>Juego
+--
+- running: bool
++ screen: Surface
++ size: int
++ time_limit: int
++ start_time: double
++ estadisticas: dict
++ usuario: str
+--
++ init()
++ on_init()
++ on_execute
++ on_loop()
++ on_render()
++ on_cleanup()
++ on_event()
++ solicitar_usuario()
++ update_timer()
++ game_over()
++ victory()
++ show_victory_screen()
++ show_game_over_screen()
++ reset_game_state()
++ restart_game()
++ registrar_victoria()
++ registrar_derrota()
++ guardar_estadisticas()
++ cargar_estadisticas()
++ subir(card, piladrop_index)
++ deal()
++ check_pila_area(posx, posy)
++ matchable(c1, c2)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>462</x>
+      <y>297</y>
+      <w>132</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+bg=BLACK</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>341</x>
+      <y>264</y>
+      <w>253</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+bg=BLACK</panel_attributes>
+    <additional_attributes>10.0;10.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>847</x>
+      <y>253</y>
+      <w>99</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>231</x>
+      <y>44</y>
+      <w>253</w>
+      <h>187</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>759</x>
+      <y>44</y>
+      <w>286</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>240.0;110.0;240.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>693</x>
+      <y>77</y>
+      <w>33</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>418</x>
+      <y>66</y>
+      <w>66</w>
+      <h>297</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;250.0;10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+</diagram>
